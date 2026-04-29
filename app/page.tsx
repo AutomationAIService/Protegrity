@@ -1,7 +1,6 @@
 import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
 import { QuickStartStrip } from "@/components/quick-start-strip"
-import { AvaGuidedReview } from "@/components/ava-guided-review"
 import { CoverageCards } from "@/components/coverage-cards"
 import { WhyChoose } from "@/components/why-choose"
 import { MeetRyan } from "@/components/meet-ryan"
@@ -20,7 +19,6 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <QuickStartStrip />
-        <AvaGuidedReview />
         <CoverageCards />
         <WhyChoose />
         <MeetRyan />

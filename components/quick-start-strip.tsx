@@ -36,8 +36,8 @@ const tiles: Tile[] = [
   },
   {
     key: "ava",
-    label: "Start Coverage Review",
-    description: "Guided step by step with Ava",
+    label: "Ask Ava",
+    description: "Quick answers from your coverage assistant",
     icon: Sparkles,
     action: "ava",
   },
@@ -102,8 +102,8 @@ export function QuickStartStrip() {
                   <button
                     key={tile.key}
                     type="button"
-                    onClick={() => openAvaWidget("start-coverage-review")}
-                    aria-label="Start a guided coverage review with Ava"
+                    onClick={() => openAvaWidget("ask-ava")}
+                    aria-label="Open Ava chat to ask a question"
                     className={baseClass}
                   >
                     {content}
