@@ -1,3 +1,5 @@
+"use client"
+
 import { openAvaWidget } from "@/lib/ava"
 import { Button } from "@/components/ui/button"
 import { ProtegrityShield } from "@/components/protegrity-shield"
