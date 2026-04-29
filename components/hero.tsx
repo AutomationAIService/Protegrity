@@ -3,7 +3,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { openAvaWidget } from "@/lib/ava"
-import { ProtegrityShield } from "@/components/protegrity-shield"
 
 export function Hero() {
   return (
@@ -39,11 +38,6 @@ export function Hero() {
             background:
               "radial-gradient(700px 220px at 50% 0%, rgba(56,189,248,0.18), transparent 70%)",
           }}
-        />
-        {/* Ambient shield watermark */}
-        <ProtegrityShield
-          className="pointer-events-none absolute right-[-3rem] top-1/2 hidden h-[520px] w-[520px] -translate-y-1/2 text-brand-glow/[0.07] md:block"
-          strokeWidth={0.6}
         />
       </div>
 
