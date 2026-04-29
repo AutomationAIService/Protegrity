@@ -22,14 +22,14 @@ export function MeetRyan() {
           {/* Portrait column */}
           <div className="relative lg:col-span-5">
             <div className="relative mx-auto w-full max-w-[420px]">
-              {/* The uploaded image has its own circular frame with blue decorative background */}
-              <div className="relative aspect-square w-full">
+              {/* Crop the portrait to remove the teal background box */}
+              <div className="relative mx-auto aspect-[3/4] w-full overflow-hidden rounded-2xl bg-secondary shadow-xl shadow-navy/20">
                 <Image
                   src="/ryan-portrait.png"
                   alt="Portrait of Ryan Lorsch, Principal Advisor at Protegrity Insurance"
                   fill
                   sizes="(min-width: 1024px) 420px, 100vw"
-                  className="object-contain"
+                  className="object-cover"
                   priority
                 />
               </div>
