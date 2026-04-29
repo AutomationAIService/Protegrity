@@ -7,7 +7,6 @@ import { MeetRyan } from "@/components/meet-ryan"
 import { CarrierStrip } from "@/components/carrier-strip"
 import { GoogleReviews } from "@/components/google-reviews"
 import { MeetAva } from "@/components/meet-ava"
-import { CoverageForm } from "@/components/coverage-form"
 import { FinalCTA } from "@/components/final-cta"
 import { SiteFooter } from "@/components/site-footer"
 import { FloatingAvaButton } from "@/components/floating-ava-button"
@@ -25,7 +24,6 @@ export default function Home() {
         <CarrierStrip />
         <GoogleReviews />
         <MeetAva />
-        <CoverageForm />
         <FinalCTA />
       </main>
       <SiteFooter />
