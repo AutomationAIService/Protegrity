@@ -20,10 +20,8 @@ export default function Home() {
         <QuickStartStrip />
         <CoverageCards />
         <WhyChoose />
-        <MeetRyan />
-        <CarrierStrip />
-        <GoogleReviews />
         <MeetAva />
+        <MeetRyan />
         <FinalCTA />
       </main>
       <SiteFooter />
