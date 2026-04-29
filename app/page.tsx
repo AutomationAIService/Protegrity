@@ -1,16 +1,35 @@
+import { SiteHeader } from "@/components/site-header"
+import { Hero } from "@/components/hero"
+import { QuickStartStrip } from "@/components/quick-start-strip"
+import { CoverageCards } from "@/components/coverage-cards"
+import { WhyChoose } from "@/components/why-choose"
+import { MeetRyan } from "@/components/meet-ryan"
+import { CarrierStrip } from "@/components/carrier-strip"
+import { GoogleReviews } from "@/components/google-reviews"
+import { MeetAva } from "@/components/meet-ava"
+import { CoverageForm } from "@/components/coverage-form"
+import { FinalCTA } from "@/components/final-cta"
+import { SiteFooter } from "@/components/site-footer"
+import { FloatingAvaButton } from "@/components/floating-ava-button"
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center font-sans">
-      <main className="flex w-full max-w-3xl flex-col items-center gap-8 px-6 py-16 text-center sm:items-start sm:text-left">
-        <div className="flex flex-col gap-4">
-          <h1 className="text-4xl font-bold tracking-tight">
-            Protegrity Insurance
-          </h1>
-          <p className="max-w-md text-lg text-muted-foreground">
-            To get started, send a prompt or modify this page directly.
-          </p>
-        </div>
+    <div className="flex min-h-screen flex-col bg-background">
+      <SiteHeader />
+      <main className="flex-1">
+        <Hero />
+        <QuickStartStrip />
+        <CoverageCards />
+        <WhyChoose />
+        <MeetRyan />
+        <CarrierStrip />
+        <GoogleReviews />
+        <MeetAva />
+        <CoverageForm />
+        <FinalCTA />
       </main>
+      <SiteFooter />
+      <FloatingAvaButton />
     </div>
-  );
+  )
 }
