@@ -83,7 +83,7 @@ export function SiteHeader() {
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[360px]" aria-describedby={undefined}>
+            <SheetContent side="right" className="w-[300px] sm:w-[360px]">
               <SheetTitle className="sr-only">Navigation</SheetTitle>
               <div className="flex h-full flex-col gap-6 px-2 pt-4">
                 <Link

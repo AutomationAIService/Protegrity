@@ -21,21 +21,35 @@ export function MeetRyan() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Portrait column */}
           <div className="relative lg:col-span-5">
-            <div className="relative mx-auto w-full max-w-[420px]">
-              {/* Crop the portrait to remove the teal background box */}
-              <div className="relative mx-auto aspect-[3/4] w-full overflow-hidden rounded-2xl bg-secondary shadow-xl shadow-navy/20">
+            <div className="relative mx-auto w-full max-w-[460px]">
+              {/* Soft brand glow behind portrait */}
+              <div
+                aria-hidden="true"
+                className="absolute -inset-6 -z-10 rounded-[2rem] opacity-50 blur-2xl"
+                style={{
+                  background:
+                    "radial-gradient(closest-side, rgba(56,189,248,0.25), transparent 75%)",
+                }}
+              />
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-secondary shadow-xl shadow-navy/20">
                 <Image
-                  src="/ryan-portrait.png"
+                  src="/ryan-portrait.jpg"
                   alt="Portrait of Ryan Lorsch, Principal Advisor at Protegrity Insurance"
                   fill
-                  sizes="(min-width: 1024px) 420px, 100vw"
+                  sizes="(min-width: 1024px) 460px, 100vw"
                   className="object-cover"
-                  priority
+                />
+                {/* Refined frame accent */}
+                <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-navy/15" />
+                {/* Subtle shield watermark in upper left */}
+                <ProtegrityShield
+                  className="pointer-events-none absolute left-4 top-4 h-8 w-8 text-white/35"
+                  strokeWidth={1.4}
                 />
               </div>
 
-              {/* Floating credential badge - positioned below the portrait */}
-              <div className="mx-auto mt-6 w-[280px] rounded-xl border border-border bg-card p-4 shadow-xl shadow-navy/20 sm:absolute sm:-bottom-4 sm:left-1/2 sm:mt-0 sm:-translate-x-1/2 lg:left-auto lg:right-[-1rem] lg:translate-x-0">
+              {/* Floating credential badge */}
+              <div className="absolute -bottom-7 left-1/2 hidden w-[280px] -translate-x-1/2 rounded-xl border border-border bg-card p-4 shadow-xl shadow-navy/20 sm:block lg:left-auto lg:right-[-1.5rem] lg:translate-x-0">
                 <div className="flex items-center gap-3">
                   <span className="relative flex h-11 w-11 flex-none items-center justify-center">
                     <ProtegrityShield
