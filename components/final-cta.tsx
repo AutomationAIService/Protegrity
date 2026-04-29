@@ -18,6 +18,21 @@ export function FinalCTA() {
 
       <div className="relative mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-[720px] text-center">
+          <div className="mb-7 flex justify-center" aria-hidden="true">
+            <span className="relative inline-flex h-14 w-14 items-center justify-center">
+              <span
+                className="absolute inset-0 rounded-full opacity-60 blur-xl"
+                style={{
+                  background:
+                    "radial-gradient(closest-side, rgba(56,189,248,0.4), transparent 70%)",
+                }}
+              />
+              <ProtegrityShield
+                className="relative h-14 w-14 text-brand-glow drop-shadow-[0_0_8px_rgba(56,189,248,0.55)]"
+                strokeWidth={1.2}
+              />
+            </span>
+          </div>
           <h2
             id="cta-heading"
             className="text-balance font-display text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[52px]"

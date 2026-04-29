@@ -2,6 +2,7 @@
 
 import { Home, Car, HeartPulse, Sparkles, ArrowRight } from "lucide-react"
 import { openAvaWidget } from "@/lib/ava"
+import { ProtegrityShield } from "@/components/protegrity-shield"
 
 type Tile = {
   key: "home" | "auto" | "life" | "ava"
@@ -62,12 +63,21 @@ export function QuickStartStrip() {
               const content = (
                 <>
                   <span
-                    className={`flex h-11 w-11 flex-none items-center justify-center rounded-xl ${
-                      isAva ? "bg-brand text-primary-foreground" : "bg-secondary text-brand"
-                    } transition-colors`}
+                    className="relative flex h-12 w-12 flex-none items-center justify-center"
                     aria-hidden="true"
                   >
-                    <Icon className="h-5 w-5" />
+                    <ProtegrityShield
+                      className={`h-12 w-12 transition-colors ${
+                        isAva ? "text-brand" : "text-brand/15 group-hover:text-brand/30"
+                      }`}
+                      strokeWidth={1.1}
+                      filled={isAva}
+                    />
+                    <Icon
+                      className={`absolute left-1/2 top-1/2 h-[18px] w-[18px] -translate-x-1/2 -translate-y-[55%] ${
+                        isAva ? "text-brand" : "text-brand"
+                      }`}
+                    />
                   </span>
                   <span className="flex min-w-0 flex-1 flex-col items-start text-left">
                     <span className="font-display text-[15px] font-semibold leading-tight text-navy">

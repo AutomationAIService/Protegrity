@@ -22,21 +22,31 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/75">
-      <div className="mx-auto flex h-16 w-full max-w-[1280px] items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
           href="#top"
           aria-label="Protegrity Insurance home"
-          className="flex items-center gap-2"
+          className="group flex items-center gap-3"
         >
-          <Image
-            src="/protegrity-shield.png"
-            alt=""
-            width={32}
-            height={32}
-            className="h-7 w-auto"
-            priority
-          />
-          <span className="font-display text-lg font-bold tracking-tight text-navy">
+            <span className="relative flex h-12 w-12 items-center justify-center">
+              <span
+                aria-hidden="true"
+                className="absolute inset-0 rounded-full opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100"
+                style={{
+                  background:
+                    "radial-gradient(closest-side, rgba(56,189,248,0.45), transparent 70%)",
+                }}
+              />
+              <Image
+                src="/protegrity-shield.png"
+                alt=""
+                width={48}
+                height={48}
+                className="relative h-11 w-11 drop-shadow-sm"
+                priority
+              />
+            </span>
+          <span className="font-display text-[22px] font-bold leading-none tracking-tight text-navy">
             Protegrity
           </span>
         </Link>
@@ -79,16 +89,16 @@ export function SiteHeader() {
                 <Link
                   href="#top"
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-3"
                 >
                   <Image
                     src="/protegrity-shield.png"
                     alt=""
-                    width={28}
-                    height={28}
-                    className="h-7 w-auto"
+                    width={44}
+                    height={44}
+                    className="h-10 w-10"
                   />
-                  <span className="font-display text-lg font-bold tracking-tight text-navy">
+                  <span className="font-display text-xl font-bold tracking-tight text-navy">
                     Protegrity
                   </span>
                 </Link>

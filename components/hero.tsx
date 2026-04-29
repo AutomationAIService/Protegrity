@@ -49,6 +49,23 @@ export function Hero() {
 
       <div className="mx-auto flex min-h-[640px] max-w-[1280px] flex-col items-center justify-center px-4 pb-32 pt-24 text-center sm:px-6 sm:pb-40 sm:pt-32 lg:min-h-[680px] lg:px-8 lg:pt-36">
         <div className="mx-auto max-w-[760px]">
+          {/* Brand shield emblem */}
+          <div className="mb-7 flex justify-center" aria-hidden="true">
+            <span className="relative inline-flex h-16 w-16 items-center justify-center">
+              <span
+                className="absolute inset-0 rounded-full opacity-70 blur-xl"
+                style={{
+                  background:
+                    "radial-gradient(closest-side, rgba(56,189,248,0.45), transparent 70%)",
+                }}
+              />
+              <ProtegrityShield
+                className="relative h-16 w-16 text-brand-glow drop-shadow-[0_0_12px_rgba(56,189,248,0.6)]"
+                strokeWidth={1.2}
+              />
+            </span>
+          </div>
+
           <p className="mb-5 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-glow">
             <span className="h-px w-6 bg-brand-glow/70" aria-hidden="true" />
             Independent Insurance Guidance

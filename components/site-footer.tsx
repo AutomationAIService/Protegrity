@@ -38,9 +38,9 @@ export function SiteFooter() {
               <Image
                 src="/protegrity-shield.png"
                 alt=""
-                width={36}
-                height={36}
-                className="h-9 w-auto"
+                width={40}
+                height={40}
+                className="h-10 w-10"
               />
               <span className="font-display text-xl font-bold tracking-tight text-white">
                 Protegrity

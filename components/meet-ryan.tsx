@@ -21,29 +21,51 @@ export function MeetRyan() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Portrait column */}
           <div className="relative lg:col-span-5">
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-[460px] overflow-hidden rounded-2xl bg-secondary shadow-xl shadow-navy/15">
-              <Image
-                src="/ryan-portrait.jpg"
-                alt="Portrait of Ryan Lorsch, Principal Advisor at Protegrity Insurance"
-                fill
-                sizes="(min-width: 1024px) 460px, 100vw"
-                className="object-cover"
+            <div className="relative mx-auto w-full max-w-[460px]">
+              {/* Soft brand glow behind portrait */}
+              <div
+                aria-hidden="true"
+                className="absolute -inset-6 -z-10 rounded-[2rem] opacity-50 blur-2xl"
+                style={{
+                  background:
+                    "radial-gradient(closest-side, rgba(56,189,248,0.25), transparent 75%)",
+                }}
               />
-              {/* Refined frame accent */}
-              <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-navy/10" />
-            </div>
+              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-secondary shadow-xl shadow-navy/20">
+                <Image
+                  src="/ryan-portrait.jpg"
+                  alt="Portrait of Ryan Lorsch, Principal Advisor at Protegrity Insurance"
+                  fill
+                  sizes="(min-width: 1024px) 460px, 100vw"
+                  className="object-cover"
+                />
+                {/* Refined frame accent */}
+                <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-navy/15" />
+                {/* Subtle shield watermark in upper left */}
+                <ProtegrityShield
+                  className="pointer-events-none absolute left-4 top-4 h-8 w-8 text-white/35"
+                  strokeWidth={1.4}
+                />
+              </div>
 
-            {/* Floating credential badge */}
-            <div className="absolute -bottom-6 left-1/2 hidden w-[260px] -translate-x-1/2 rounded-xl border border-border bg-card p-4 shadow-lg shadow-navy/15 sm:block lg:left-auto lg:right-[-1.5rem] lg:translate-x-0">
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-secondary text-brand">
-                  <ProtegrityShield className="h-5 w-5" filled />
-                </div>
-                <div>
-                  <p className="font-display text-sm font-semibold text-navy">
-                    Principal Advisor
-                  </p>
-                  <p className="text-xs text-muted-foreground">Protegrity Insurance</p>
+              {/* Floating credential badge */}
+              <div className="absolute -bottom-7 left-1/2 hidden w-[280px] -translate-x-1/2 rounded-xl border border-border bg-card p-4 shadow-xl shadow-navy/20 sm:block lg:left-auto lg:right-[-1.5rem] lg:translate-x-0">
+                <div className="flex items-center gap-3">
+                  <span className="relative flex h-11 w-11 flex-none items-center justify-center">
+                    <ProtegrityShield
+                      className="h-11 w-11 text-brand"
+                      strokeWidth={1.2}
+                      filled
+                    />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="font-display text-[15px] font-semibold leading-tight text-navy">
+                      Principal Advisor
+                    </p>
+                    <p className="mt-0.5 text-xs text-muted-foreground">
+                      Protegrity Insurance Brokerage
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -64,55 +86,74 @@ export function MeetRyan() {
               Ryan has worked in the insurance industry since 2012. As Principal of Protegrity, he helps clients review coverage options with a focus on service, clarity, and long term value.
             </p>
 
+            <p className="mt-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">
+              Background And Credentials
+            </p>
             <ul
-              className="mt-8 grid grid-cols-1 gap-2.5 sm:grid-cols-2"
+              className="mt-3 grid grid-cols-1 gap-2.5 sm:grid-cols-2"
               role="list"
               aria-label="Credentials"
             >
               {credentials.map((credential) => (
                 <li
                   key={credential}
-                  className="flex items-center gap-2.5 rounded-xl border border-border bg-card px-4 py-2.5 text-sm font-medium text-navy"
+                  className="group flex items-center gap-3 rounded-xl border border-border bg-card px-4 py-3 text-[14px] font-medium text-navy shadow-sm shadow-navy/5 transition-all hover:-translate-y-0.5 hover:border-brand/30 hover:shadow-md hover:shadow-navy/10"
                 >
-                  <ProtegrityShield className="h-4 w-4 flex-none text-brand" filled />
+                  <span className="relative flex h-7 w-7 flex-none items-center justify-center">
+                    <ProtegrityShield
+                      className="h-7 w-7 text-brand/15 transition-colors group-hover:text-brand/25"
+                      strokeWidth={1.2}
+                      filled
+                    />
+                    <ProtegrityShield
+                      className="absolute h-3.5 w-3.5 text-brand"
+                      strokeWidth={1.6}
+                    />
+                  </span>
                   <span>{credential}</span>
                 </li>
               ))}
             </ul>
 
             {/* Contact card */}
-            <div className="mt-8 rounded-2xl border border-border bg-secondary/60 p-5 sm:p-6">
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="mt-9 overflow-hidden rounded-2xl border border-border bg-card shadow-md shadow-navy/10">
+              <div className="flex items-center gap-2.5 border-b border-border bg-secondary/60 px-5 py-3">
+                <ProtegrityShield className="h-4 w-4 flex-none text-brand" filled />
+                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-navy/80">
+                  Direct Line
+                </p>
+              </div>
+              <div className="grid grid-cols-1 divide-y divide-border sm:grid-cols-2 sm:divide-x sm:divide-y-0">
                 <a
                   href="tel:4803634160"
-                  className="group flex items-center gap-3 rounded-xl bg-card px-4 py-3 transition-colors hover:bg-secondary"
+                  className="group flex items-center gap-3 px-5 py-4 transition-colors hover:bg-secondary/60"
                   aria-label="Call Ryan at 480.363.4160"
                 >
-                  <span className="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-brand/10 text-brand">
+                  <span className="flex h-11 w-11 flex-none items-center justify-center rounded-xl bg-brand/10 text-brand transition-colors group-hover:bg-brand group-hover:text-white">
                     <Phone className="h-4 w-4" />
                   </span>
-                  <div>
-                    <p className="text-xs uppercase tracking-wider text-muted-foreground">
+                  <div className="min-w-0">
+                    <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
                       Phone
                     </p>
-                    <p className="font-display text-[15px] font-semibold text-navy group-hover:text-brand">
+                    <p className="mt-0.5 font-display text-[15px] font-semibold text-navy group-hover:text-brand">
                       480.363.4160
                     </p>
                   </div>
                 </a>
                 <a
                   href="mailto:ryan@protegrityinsurance.com"
-                  className="group flex items-center gap-3 rounded-xl bg-card px-4 py-3 transition-colors hover:bg-secondary"
+                  className="group flex items-center gap-3 px-5 py-4 transition-colors hover:bg-secondary/60"
                   aria-label="Email Ryan at ryan@protegrityinsurance.com"
                 >
-                  <span className="flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-brand/10 text-brand">
+                  <span className="flex h-11 w-11 flex-none items-center justify-center rounded-xl bg-brand/10 text-brand transition-colors group-hover:bg-brand group-hover:text-white">
                     <Mail className="h-4 w-4" />
                   </span>
                   <div className="min-w-0">
-                    <p className="text-xs uppercase tracking-wider text-muted-foreground">
+                    <p className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
                       Email
                     </p>
-                    <p className="truncate font-display text-[15px] font-semibold text-navy group-hover:text-brand">
+                    <p className="mt-0.5 truncate font-display text-[15px] font-semibold text-navy group-hover:text-brand">
                       ryan@protegrityinsurance.com
                     </p>
                   </div>
