@@ -27,8 +27,49 @@ export function MeetAva() {
 
       <div className="relative mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-16">
-          {/* Decorative chat preview */}
-          <div className="lg:col-span-6" aria-hidden="true">
+          {/* Copy column — appears first on all viewports */}
+          <div className="lg:col-span-6 lg:order-1">
+            <p className="mb-4 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-glow">
+              <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
+              Meet Ava
+            </p>
+            <h2
+              id="ava-heading"
+              className="text-balance font-display text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[44px]"
+            >
+              Your Virtual Coverage Assistant
+            </h2>
+            <p className="mt-5 max-w-[560px] text-pretty text-base leading-relaxed text-white/75 sm:text-lg">
+              Ava can help visitors get quick answers, choose the right coverage path, and connect with the next step.
+            </p>
+
+            <ul className="mt-8 space-y-3" role="list">
+              {[
+                "Quick answers about coverage options",
+                "A guided path to start a review",
+                "A simple way to reach a Protegrity advisor",
+              ].map((line) => (
+                <li key={line} className="flex items-start gap-3 text-[15px] text-white/85">
+                  <ProtegrityShield className="mt-0.5 h-4 w-4 flex-none text-brand-glow" filled />
+                  <span>{line}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-9">
+              <Button
+                size="lg"
+                onClick={() => openAvaWidget("chat-with-ava")}
+                aria-label="Open Ava chat"
+                className="h-12 rounded-full bg-brand px-7 text-base font-medium text-primary-foreground shadow-lg shadow-brand/30 hover:bg-brand-2"
+              >
+                Chat With Ava
+              </Button>
+            </div>
+          </div>
+
+          {/* Decorative chat preview — appears second on all viewports */}
+          <div className="lg:col-span-6 lg:order-2" aria-hidden="true">
             <div className="relative mx-auto max-w-[480px]">
               {/* Outer glow */}
               <div
@@ -108,46 +149,7 @@ export function MeetAva() {
             </div>
           </div>
 
-          {/* Copy column */}
-          <div className="lg:col-span-6">
-            <p className="mb-4 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-brand-glow">
-              <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
-              Meet Ava
-            </p>
-            <h2
-              id="ava-heading"
-              className="text-balance font-display text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[44px]"
-            >
-              Your Virtual Coverage Assistant
-            </h2>
-            <p className="mt-5 max-w-[560px] text-pretty text-base leading-relaxed text-white/75 sm:text-lg">
-              Ava can help visitors get quick answers, choose the right coverage path, and connect with the next step.
-            </p>
 
-            <ul className="mt-8 space-y-3" role="list">
-              {[
-                "Quick answers about coverage options",
-                "A guided path to start a review",
-                "A simple way to reach a Protegrity advisor",
-              ].map((line) => (
-                <li key={line} className="flex items-start gap-3 text-[15px] text-white/85">
-                  <ProtegrityShield className="mt-0.5 h-4 w-4 flex-none text-brand-glow" filled />
-                  <span>{line}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-9">
-              <Button
-                size="lg"
-                onClick={() => openAvaWidget("chat-with-ava")}
-                aria-label="Open Ava chat"
-                className="h-12 rounded-full bg-brand px-7 text-base font-medium text-primary-foreground shadow-lg shadow-brand/30 hover:bg-brand-2"
-              >
-                Chat With Ava
-              </Button>
-            </div>
-          </div>
         </div>
       </div>
     </section>

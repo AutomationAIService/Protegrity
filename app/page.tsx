@@ -16,11 +16,10 @@ export default function Home() {
       <SiteHeader />
       <main className="flex-1">
         <Hero />
-        <QuickStartStrip />
-        <CoverageCards />
-        <WhyChoose />
-        <MeetAva />
         <MeetRyan />
+        <WhyChoose />
+        <CoverageCards />
+        <MeetAva />
         <FAQ />
         <FinalCTA />
       </main>
