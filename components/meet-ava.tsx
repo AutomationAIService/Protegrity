@@ -83,13 +83,13 @@ export function MeetAva() {
               <div className="relative rounded-2xl border border-white/10 bg-navy-2/80 p-5 shadow-2xl backdrop-blur-sm sm:p-6">
                 {/* Header */}
                 <div className="flex items-center gap-3 border-b border-white/10 pb-4">
-                  <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-brand/20 text-brand-glow">
+                  <span className="flex h-[60px] w-[60px] items-center justify-center rounded-lg bg-brand/20 text-brand-glow">
                     <Image
-                      src="/protegrity-shield.png"
+                      src="/Protegrity%20Updated%20Logo%20Transparent.png"
                       alt=""
-                      width={20}
-                      height={20}
-                      className="h-5 w-5"
+                      width={60}
+                      height={60}
+                      className="h-[60px] w-[60px] object-contain"
                     />
                   </span>
                   <div>

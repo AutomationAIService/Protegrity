@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { useEffect, useState } from "react"
 import { openAvaWidget } from "@/lib/ava"
 
@@ -33,12 +32,12 @@ export function FloatingAvaButton() {
       }`}
       aria-hidden={!visible}
     >
-      {/* Mobile: compact circular button */}
+      {/* Mobile */}
       <button
         type="button"
         onClick={() => openAvaWidget("floating")}
         aria-label="Open Ava chat"
-        className="pointer-events-auto group relative inline-flex h-16 w-16 items-center justify-center rounded-full bg-navy text-white shadow-xl shadow-navy/40 ring-1 ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-navy-2 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow sm:hidden"
+        className="pointer-events-auto group relative inline-flex items-center rounded-full bg-[#1a56db] px-5 py-3 shadow-xl shadow-navy/40 ring-1 ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-brand-2 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow sm:hidden"
       >
         <span
           className="absolute -inset-1 rounded-full opacity-70 blur-md"
@@ -48,21 +47,17 @@ export function FloatingAvaButton() {
           }}
           aria-hidden="true"
         />
-        <Image
-          src="/protegrity-shield.png"
-          alt=""
-          width={36}
-          height={36}
-          className="relative h-9 w-9 drop-shadow-[0_0_6px_rgba(56,189,248,0.45)]"
-        />
+        <span className="relative text-[15px] font-medium tracking-tight text-white">
+          Chat With Ava
+        </span>
       </button>
 
-      {/* Desktop: navy pill with label */}
+      {/* Desktop */}
       <button
         type="button"
         onClick={() => openAvaWidget("floating")}
         aria-label="Open Ava chat"
-        className="pointer-events-auto group relative hidden items-center gap-3 rounded-full bg-navy py-3 pl-3 pr-5 text-white shadow-xl shadow-navy/40 ring-1 ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-navy-2 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow sm:inline-flex"
+        className="pointer-events-auto group relative hidden items-center rounded-full bg-[#1a56db] px-5 py-3 shadow-xl shadow-navy/40 ring-1 ring-white/10 transition-all hover:-translate-y-0.5 hover:bg-brand-2 hover:shadow-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-glow sm:inline-flex"
       >
         <span
           className="absolute -inset-1 rounded-full opacity-60 blur-md"
@@ -72,16 +67,9 @@ export function FloatingAvaButton() {
           }}
           aria-hidden="true"
         />
-        <span className="relative flex h-9 w-9 items-center justify-center rounded-full bg-white/5 ring-1 ring-white/10">
-          <Image
-            src="/protegrity-shield.png"
-            alt=""
-            width={28}
-            height={28}
-            className="h-7 w-7 drop-shadow-[0_0_4px_rgba(56,189,248,0.5)]"
-          />
+        <span className="relative text-[15px] font-medium tracking-tight text-white">
+          Chat With Ava
         </span>
-        <span className="relative text-[15px] font-medium tracking-tight">Chat With Ava</span>
       </button>
     </div>
   )

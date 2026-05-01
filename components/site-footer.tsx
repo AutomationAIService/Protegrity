@@ -24,9 +24,9 @@ export function SiteFooter() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="relative overflow-hidden bg-navy text-white">
+    <footer className="relative overflow-hidden bg-white text-[#0d1b2e]">
       <ProtegrityShield
-        className="pointer-events-none absolute -right-24 -top-24 h-[400px] w-[400px] text-brand-glow/[0.04]"
+        className="pointer-events-none absolute -right-24 -top-24 h-[400px] w-[400px] text-[#0d1b2e]/[0.04]"
         strokeWidth={0.6}
       />
 
@@ -34,40 +34,37 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-10">
           {/* Brand column */}
           <div className="lg:col-span-4">
-            <Link href="#top" className="flex items-center gap-2.5" aria-label="Protegrity home">
+            <Link href="#top" className="flex items-center" aria-label="Protegrity home">
               <Image
-                src="/protegrity-shield.png"
+                src="/Protegrity%20Updated%20Logo%20Transparent.png"
                 alt=""
-                width={40}
-                height={40}
-                className="h-10 w-10"
+                width={320}
+                height={80}
+                className="h-16 w-auto max-w-[min(320px,100%)] object-contain object-left"
               />
-              <span className="font-display text-xl font-bold tracking-tight text-white">
-                Protegrity
-              </span>
             </Link>
-            <p className="mt-4 text-sm font-medium uppercase tracking-[0.18em] text-brand-glow/85">
+            <p className="mt-4 text-sm font-medium uppercase tracking-[0.18em] text-[#4a9eff]">
               Protection With Integrity
             </p>
-            <p className="mt-4 max-w-[340px] text-sm leading-relaxed text-white/65">
+            <p className="mt-4 max-w-[340px] text-sm leading-relaxed text-[#0d1b2e]">
               Independent insurance guidance for home, auto, and life. Personal advisory service from Protegrity Insurance Brokerage.
             </p>
 
             <div className="mt-6 flex flex-col gap-2.5">
               <a
                 href="tel:4803634160"
-                className="group inline-flex items-center gap-2.5 text-sm text-white/80 transition-colors hover:text-brand-glow"
+                className="group inline-flex items-center gap-2.5 text-sm text-[#4a9eff] transition-colors hover:text-[#4a9eff]/90"
               >
-                <span className="flex h-8 w-8 items-center justify-center rounded-md bg-white/5 text-brand-glow group-hover:bg-white/10">
+                <span className="flex h-8 w-8 items-center justify-center rounded-md bg-[#0d1b2e]/[0.06] text-[#4a9eff] group-hover:bg-[#0d1b2e]/10">
                   <Phone className="h-3.5 w-3.5" />
                 </span>
                 480.363.4160
               </a>
               <a
                 href="mailto:ryan@protegrityinsurance.com"
-                className="group inline-flex items-center gap-2.5 text-sm text-white/80 transition-colors hover:text-brand-glow"
+                className="group inline-flex items-center gap-2.5 text-sm text-[#4a9eff] transition-colors hover:text-[#4a9eff]/90"
               >
-                <span className="flex h-8 w-8 items-center justify-center rounded-md bg-white/5 text-brand-glow group-hover:bg-white/10">
+                <span className="flex h-8 w-8 items-center justify-center rounded-md bg-[#0d1b2e]/[0.06] text-[#4a9eff] group-hover:bg-[#0d1b2e]/10">
                   <Mail className="h-3.5 w-3.5" />
                 </span>
                 ryan@protegrityinsurance.com
@@ -77,7 +74,7 @@ export function SiteFooter() {
 
           {/* Navigation column */}
           <div className="lg:col-span-3">
-            <h3 className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-white">
+            <h3 className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-[#0d1b2e]">
               Navigate
             </h3>
             <ul className="mt-5 space-y-3" role="list">
@@ -85,7 +82,7 @@ export function SiteFooter() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/65 transition-colors hover:text-brand-glow"
+                    className="text-sm text-[#4a9eff] transition-colors hover:text-[#4a9eff]/90"
                   >
                     {link.label}
                   </Link>
@@ -96,7 +93,7 @@ export function SiteFooter() {
 
           {/* Coverage column */}
           <div className="lg:col-span-3">
-            <h3 className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-white">
+            <h3 className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-[#0d1b2e]">
               Coverage
             </h3>
             <ul className="mt-5 space-y-3" role="list">
@@ -104,7 +101,7 @@ export function SiteFooter() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-white/65 transition-colors hover:text-brand-glow"
+                    className="text-sm text-[#4a9eff] transition-colors hover:text-[#4a9eff]/90"
                   >
                     {link.label}
                   </Link>
@@ -115,10 +112,10 @@ export function SiteFooter() {
 
           {/* Office column */}
           <div className="lg:col-span-2">
-            <h3 className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-white">
+            <h3 className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-[#0d1b2e]">
               Office
             </h3>
-            <p className="mt-5 text-sm leading-relaxed text-white/65">
+            <p className="mt-5 text-sm leading-relaxed text-[#0d1b2e]">
               Independent brokerage
               <br />
               Licensed in 40 states
@@ -126,11 +123,11 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-white/55">
+        <div className="mt-14 flex flex-col gap-4 border-t border-[#0d1b2e]/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-xs text-[#0d1b2e]/60">
             {`\u00A9 ${year} Protegrity Insurance Brokerage. All rights reserved.`}
           </p>
-          <p className="text-xs text-white/55">
+          <p className="text-xs text-[#0d1b2e]/60">
             Insurance products are offered through licensed carriers.
           </p>
         </div>

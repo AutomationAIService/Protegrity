@@ -26,28 +26,25 @@ export function SiteHeader() {
         <Link
           href="#top"
           aria-label="Protegrity Insurance home"
-          className="group flex items-center gap-3"
+          className="group flex items-center"
         >
-            <span className="relative flex h-12 w-12 items-center justify-center">
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 rounded-full opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100"
-                style={{
-                  background:
-                    "radial-gradient(closest-side, rgba(56,189,248,0.45), transparent 70%)",
-                }}
-              />
-              <Image
-                src="/protegrity-shield.png"
-                alt=""
-                width={48}
-                height={48}
-                className="relative h-11 w-11 drop-shadow-sm"
-                priority
-              />
-            </span>
-          <span className="font-display text-[22px] font-bold leading-none tracking-tight text-navy">
-            Protegrity
+          <span className="relative inline-flex h-[72px] max-h-[72px] w-auto max-w-[min(320px,calc(100vw-11rem))] shrink-0 items-center justify-start">
+            <span
+              aria-hidden="true"
+              className="absolute inset-0 rounded-full opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100"
+              style={{
+                background:
+                  "radial-gradient(closest-side, rgba(56,189,248,0.45), transparent 70%)",
+              }}
+            />
+            <Image
+              src="/Protegrity%20Updated%20Logo%20Transparent.png"
+              alt=""
+              width={320}
+              height={80}
+              className="relative h-[72px] w-auto max-w-full object-contain object-left drop-shadow-sm"
+              priority
+            />
           </span>
         </Link>
 
@@ -89,18 +86,15 @@ export function SiteHeader() {
                 <Link
                   href="#top"
                   onClick={() => setOpen(false)}
-                  className="flex items-center gap-3"
+                  className="flex items-center"
                 >
                   <Image
-                    src="/protegrity-shield.png"
+                    src="/Protegrity%20Updated%20Logo%20Transparent.png"
                     alt=""
-                    width={44}
-                    height={44}
-                    className="h-10 w-10"
+                    width={280}
+                    height={70}
+                    className="h-[52px] w-auto max-w-full object-contain object-left"
                   />
-                  <span className="font-display text-xl font-bold tracking-tight text-navy">
-                    Protegrity
-                  </span>
                 </Link>
                 <nav className="flex flex-col gap-1" aria-label="Mobile">
                   {navLinks.map((link) => (
