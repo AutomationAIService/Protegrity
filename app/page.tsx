@@ -3,10 +3,9 @@ import { Hero } from "@/components/hero"
 import { QuickStartStrip } from "@/components/quick-start-strip"
 import { CoverageCards } from "@/components/coverage-cards"
 import { WhyChoose } from "@/components/why-choose"
-import { MeetRyan } from "@/components/meet-ryan"
-import { CarrierStrip } from "@/components/carrier-strip"
-import { GoogleReviews } from "@/components/google-reviews"
 import { MeetAva } from "@/components/meet-ava"
+import { MeetRyan } from "@/components/meet-ryan"
+import { FAQ } from "@/components/faq"
 import { FinalCTA } from "@/components/final-cta"
 import { SiteFooter } from "@/components/site-footer"
 import { FloatingAvaButton } from "@/components/floating-ava-button"
@@ -22,6 +21,7 @@ export default function Home() {
         <WhyChoose />
         <MeetAva />
         <MeetRyan />
+        <FAQ />
         <FinalCTA />
       </main>
       <SiteFooter />
