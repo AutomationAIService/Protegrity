@@ -5,6 +5,7 @@ import { CoverageCards } from "@/components/coverage-cards"
 import { WhyChoose } from "@/components/why-choose"
 import { MeetAva } from "@/components/meet-ava"
 import { MeetRyan } from "@/components/meet-ryan"
+import { Reviews } from "@/components/reviews"
 import { FAQ } from "@/components/faq"
 import { FinalCTA } from "@/components/final-cta"
 import { SiteFooter } from "@/components/site-footer"
@@ -20,6 +21,7 @@ export default function Home() {
         <WhyChoose />
         <CoverageCards />
         <MeetAva />
+        <Reviews />
         <FAQ />
         <FinalCTA />
       </main>

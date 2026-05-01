@@ -47,7 +47,9 @@ export function Hero() {
             id="hero-heading"
             className="text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-[64px]"
           >
-            Protection With Integrity For What Matters Most
+            Protection With Integrity
+            <br />
+            It&apos;s The Service That Counts
           </h1>
 
           <p className="mx-auto mt-6 max-w-[620px] text-pretty text-base leading-relaxed text-white/80 sm:text-lg">
